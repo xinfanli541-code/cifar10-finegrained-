@@ -1,0 +1,31 @@
+{
+  "image": "test_dog.png",
+  "true": "dog",
+  "pred": "dog",
+  "top3": [
+    [
+      "dog",
+      0.9896
+    ],
+    [
+      "cat",
+      0.0062
+    ],
+    [
+      "horse",
+      0.0025
+    ]
+  ],
+  "cam_stats": {
+    "centroid_x": 14.7,
+    "centroid_y": 17.5,
+    "hottest_cell": "中中",
+    "hottest_share": 0.19,
+    "center_share": 0.374,
+    "edge_share": 0.626,
+    "peak": 1.0
+  },
+  "explanation": "判对了：实际是狗，模型也判成狗（99%），第二名猫只有 1%，差距比较大，判断相对确定；热力图最热在图片中中部（占 19%），中心区域占 37%。",
+  "ckpt": "8",
+  "time": "20261123-132424"
+}

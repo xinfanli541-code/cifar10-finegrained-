@@ -1,0 +1,163 @@
+{
+  "n_total": 120,
+  "n_per_class": 12,
+  "seed": 42,
+  "accuracy": 0.925,
+  "n_correct": 111,
+  "n_misclassified": 9,
+  "per_class_accuracy": {
+    "airplane": 1.0,
+    "automobile": 1.0,
+    "bird": 0.8333,
+    "cat": 0.8333,
+    "deer": 1.0,
+    "dog": 1.0,
+    "frog": 0.8333,
+    "horse": 0.9167,
+    "ship": 0.8333,
+    "truck": 1.0
+  },
+  "top_confusions": [
+    [
+      2,
+      "bird",
+      "cat"
+    ],
+    [
+      1,
+      "horse",
+      "dog"
+    ],
+    [
+      1,
+      "frog",
+      "cat"
+    ],
+    [
+      1,
+      "frog",
+      "dog"
+    ],
+    [
+      1,
+      "ship",
+      "truck"
+    ],
+    [
+      1,
+      "ship",
+      "frog"
+    ],
+    [
+      1,
+      "cat",
+      "deer"
+    ],
+    [
+      1,
+      "cat",
+      "dog"
+    ]
+  ],
+  "misclassified_examples": [
+    {
+      "file": "misclassified_cat_as_dog_8580.png",
+      "index": 8580,
+      "true": "cat",
+      "pred": "dog",
+      "explanation": "判错了：实际是猫，模型判成狗（48%），这是已知的难混淆对；第二名猫有 41%，差距不大，结论只能算比较确定；热力图最热在图片中中部（占 24%），中心区域占 43%。",
+      "cam_stats": {
+        "centroid_x": 13.4,
+        "centroid_y": 13.4,
+        "hottest_cell": "中中",
+        "hottest_share": 0.238,
+        "center_share": 0.43,
+        "edge_share": 0.57,
+        "peak": 1.0
+      }
+    },
+    {
+      "file": "misclassified_cat_as_deer_8557.png",
+      "index": 8557,
+      "true": "cat",
+      "pred": "deer",
+      "explanation": "判错了：实际是猫，模型判成鹿（60%），这是已知的难混淆对；第二名猫只有 34%，差距比较大，判断相对确定；热力图最热在图片下中部（占 27%），中心区域占 26%。",
+      "cam_stats": {
+        "centroid_x": 15.3,
+        "centroid_y": 22.5,
+        "hottest_cell": "下中",
+        "hottest_share": 0.273,
+        "center_share": 0.259,
+        "edge_share": 0.741,
+        "peak": 1.0
+      }
+    },
+    {
+      "file": "misclassified_bird_as_cat_2321.png",
+      "index": 2321,
+      "true": "bird",
+      "pred": "cat",
+      "explanation": "判错了：实际是鸟，模型判成猫（69%）；第二名鸟只有 22%，差距比较大，判断相对确定；热力图最热在图片下中部（占 27%），中心区域占 28%。",
+      "cam_stats": {
+        "centroid_x": 16.3,
+        "centroid_y": 22.8,
+        "hottest_cell": "下中",
+        "hottest_share": 0.271,
+        "center_share": 0.281,
+        "edge_share": 0.719,
+        "peak": 1.0
+      }
+    },
+    {
+      "file": "misclassified_bird_as_cat_9082.png",
+      "index": 9082,
+      "true": "bird",
+      "pred": "cat",
+      "explanation": "判错了：实际是鸟，模型判成猫（61%）；第二名青蛙只有 28%，差距比较大，判断相对确定；热力图最热在图片下右部（占 23%），中心区域占 30%。",
+      "cam_stats": {
+        "centroid_x": 18.1,
+        "centroid_y": 21.1,
+        "hottest_cell": "下右",
+        "hottest_share": 0.233,
+        "center_share": 0.304,
+        "edge_share": 0.696,
+        "peak": 1.0
+      }
+    },
+    {
+      "file": "misclassified_horse_as_dog_567.png",
+      "index": 567,
+      "true": "horse",
+      "pred": "dog",
+      "explanation": "判错了：实际是马，模型判成狗（58%）；第二名猫只有 32%，差距比较大，判断相对确定；热力图最热在图片中中部（占 17%），中心区域占 34%。",
+      "cam_stats": {
+        "centroid_x": 15.8,
+        "centroid_y": 16.2,
+        "hottest_cell": "中中",
+        "hottest_share": 0.17,
+        "center_share": 0.339,
+        "edge_share": 0.661,
+        "peak": 1.0
+      }
+    },
+    {
+      "file": "misclassified_frog_as_cat_1572.png",
+      "index": 1572,
+      "true": "frog",
+      "pred": "cat",
+      "explanation": "判错了：实际是青蛙，模型判成猫（75%）；第二名狗只有 20%，差距比较大，判断相对确定；热力图最热在图片中右部（占 25%），中心区域占 34%。",
+      "cam_stats": {
+        "centroid_x": 20.1,
+        "centroid_y": 15.5,
+        "hottest_cell": "中右",
+        "hottest_share": 0.246,
+        "center_share": 0.341,
+        "edge_share": 0.659,
+        "peak": 1.0
+      }
+    }
+  ],
+  "ckpt_epoch": 8,
+  "ckpt_val_acc": 0.8772,
+  "note": "120 张小样本实测，不是 10k 全测试集；数字如实记录，勿与 87.02% 全集准确率直接比较。"
+}

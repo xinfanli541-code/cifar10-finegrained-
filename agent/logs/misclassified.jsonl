@@ -1,0 +1,1 @@
+{"time": "2026-11-23T13:25:03", "image": "test_cat_as_dog.png", "true": "cat", "pred": "dog", "top3": [["dog", 0.4838], ["cat", 0.4106], ["frog", 0.0886]], "cam_centroid": [13.4, 13.4], "cam_hottest_cell": "中中"}

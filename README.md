@@ -46,3 +46,21 @@
 - `outputs/<组>/best.pth`、`history.json`、`training_curves.png`
 - `analysis/<组>/confusion.json`、`confusion_matrix.png`、`gradcam_*.png`
 - `对比实验报告.md`（待写）：准确率表、逐类表、结论、简历一句话
+
+## 新增：会解释的图像分类 Agent
+
+详见 `agent/README.md`。做法是分类 → Grad-CAM → 一句话中文解释 →
+错判日志闭环，不重新训练，复用基线 ResNet18 权重（测试准确率 87.02%）
+和 `src/analyze.py` 的 Grad-CAM 逻辑。
+
+- 跑法（仓库根目录）：
+  `../pytorch-image-classification/venv/bin/python -m agent.cli --image <图> [--true cat]`
+  `../pytorch-image-classification/venv/bin/python -m agent.cli review`
+  `../pytorch-image-classification/venv/bin/python -m agent.demo_test`
+- 权重不在仓库里：默认在 `../pytorch-image-classification/outputs/resnet18/best.pth`
+  （43M），本地跑之前先确认这个文件在，可用 `--ckpt` 覆盖。
+- 实测（2026-11-23，CPU）：demo_test 120 张（每类 12 张，seed 42）准确率
+  92.5%（111/120），猫 83.3%、鸟 83.3%，top 混淆是鸟→猫 2 次；
+  120 张小样本数字不能和全测试集 87.02% 直接比，详见 `agent/README.md`
+  和 `agent/runs/demo_test/summary.json`。
+
