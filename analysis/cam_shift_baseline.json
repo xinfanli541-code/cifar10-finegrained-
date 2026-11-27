@@ -1,0 +1,25 @@
+{
+  "ckpt": "/home/hatch/workspace/pytorch-image-classification/outputs/resnet18/best.pth",
+  "n_catdog_test": 2000,
+  "cat": {
+    "n": 1000,
+    "top12_frac": 0.29061641912616326,
+    "top_half_frac": 0.4292540477989241,
+    "center_frac": 0.3208289700970054,
+    "top25_mass_frac": 0.4290687772631645
+  },
+  "dog": {
+    "n": 1000,
+    "top12_frac": 0.2719119800212793,
+    "top_half_frac": 0.42976669100299475,
+    "center_frac": 0.3926173288077116,
+    "top25_mass_frac": 0.4645080370306969
+  },
+  "all": {
+    "n": 2000,
+    "top12_frac": 0.2812641995737213,
+    "top_half_frac": 0.42951036940095944,
+    "center_frac": 0.3567231494523585,
+    "top25_mass_frac": 0.4467884071469307
+  }
+}

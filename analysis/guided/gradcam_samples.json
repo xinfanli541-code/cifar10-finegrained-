@@ -1,0 +1,50 @@
+[
+  {
+    "true": "cat",
+    "pred": "dog"
+  },
+  {
+    "true": "cat",
+    "pred": "dog"
+  },
+  {
+    "true": "cat",
+    "pred": "frog"
+  },
+  {
+    "true": "cat",
+    "pred": "frog"
+  },
+  {
+    "true": "cat",
+    "pred": "horse"
+  },
+  {
+    "true": "dog",
+    "pred": "cat"
+  },
+  {
+    "true": "dog",
+    "pred": "cat"
+  },
+  {
+    "true": "cat",
+    "pred": "bird"
+  },
+  {
+    "true": "cat",
+    "pred": "horse"
+  },
+  {
+    "true": "cat",
+    "pred": "bird"
+  },
+  {
+    "true": "dog",
+    "pred": "horse"
+  },
+  {
+    "true": "dog",
+    "pred": "horse"
+  }
+]
